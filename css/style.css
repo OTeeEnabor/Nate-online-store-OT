@@ -1,15 +1,28 @@
 
+.header-top{
+  position:fixed;
+  top:0;
+}
 .header-top-row1{
     /* width: 100%; */
     height: 3.3125rem;
     background-color:black;
     color:grey;
   }
-
+  .header-top-lang{
+    background-color: antiquewhite;
+    display:flex;
+    justify-content: flex-end;
+  }
+  .header-top-news{
+    display:flex;
+    justify-content:center;
+    align-items: center;
+  }
 .header-top-news p {
     margin-left:auto;
     margin-right:auto;
-    width:50%;
+    /* width:50%; */
     height:17%;
     font-family: SourceSansPro;
     font-size: 0.75rem;
@@ -20,4 +33,22 @@
     letter-spacing: 0.15rem;
     text-align: center;
     color: #999999;
+}
+.header-btn{
+  background-color: black;
+  color:grey;
+}
+
+
+.header-top-row-2{
+  background-color:blue;
+}
+
+.nav-bar-col-2{
+  background-color:black;
+}
+
+.banner-image{
+  margin-top:2500px;
+  background: url(../images/open_delta.png)
 }

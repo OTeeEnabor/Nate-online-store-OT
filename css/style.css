@@ -1,0 +1,23 @@
+
+.header-top-row1{
+    /* width: 100%; */
+    height: 3.3125rem;
+    background-color:black;
+    color:grey;
+  }
+
+.header-top-news p {
+    margin-left:auto;
+    margin-right:auto;
+    width:50%;
+    height:17%;
+    font-family: SourceSansPro;
+    font-size: 0.75rem;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.83;
+    letter-spacing: 0.15rem;
+    text-align: center;
+    color: #999999;
+}

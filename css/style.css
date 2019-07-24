@@ -1,4 +1,14 @@
 
+
+:root{
+  --white-four:#e5e5e5;
+}
+h1,
+h2,
+h3,
+h4{
+  font-family:SourceSansPro;
+}
 .header-top{
   position:fixed;
   top:0;
@@ -47,8 +57,65 @@
 .nav-bar-col-2{
   background-color:black;
 }
-
+.nav-bar-spacing{
+  display: flex;
+  justify-content: space-evenly;
+}
 .banner-image{
-  margin-top:2500px;
+  /* margin-top:2500px; */
   background: url(../images/open_delta.png)
+}
+.footer-top{
+  margin-top:1000px;
+  height:21.25rem;
+  background-color:#2d2827;
+}
+.footer-top-heading{
+  margin-top:3.75rem;
+  color:var(--white-four);
+}
+.footer-contacts{
+  display:flex;
+  justify-content: flex-end;
+}
+.footer-links{
+  /* display:flex;
+  justify-content: center;
+  align-items: initial; */
+  margin-left:auto;
+  margin-right:auto;
+  text-align:center;
+}
+.footer-links ul{
+  list-style-type: none;
+  margin-top: 3.75rem;
+  display: flex;
+  align-content: space-between;
+}
+
+.footer-shops{
+  display:flex;
+  justify-content: center;
+}
+.footer-instagram{
+  display:flex;
+  justify-content: flex-start;
+}
+
+.footer-bottom{
+  display:flex;
+  justify-content:center;
+  background-color: var(--white-two);
+}
+.footer-bottom p{
+    font-family: SourceSansPro;
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.71;
+    letter-spacing: normal;
+    text-align: left;
+    color: #666666;
+  }
 }

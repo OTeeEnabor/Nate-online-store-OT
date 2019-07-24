@@ -3,15 +3,18 @@
 :root{
   --white-four:#e5e5e5;
 }
+body{
+  background-color:black;
+}
 h1,
 h2,
 h3,
 h4{
   font-family:SourceSansPro;
 }
-.header-top{
+/* .header-top{
   position:fixed;
-  top:0;
+  top:0; */
 }
 .header-top-row1{
     /* width: 100%; */
@@ -53,7 +56,61 @@ h4{
 .header-top-row-2{
   background-color:blue;
 }
+.nav-col{
+  margin:0 auto;
+}
+.nav-col ul{
+  margin:0;
+  padding:0;
+  list-style-type: none;
+  text-align:right;
+}
+.nav-col ul li{
+  float:none;
+  display:inline-block;
+}
+.nav-col ul li:nth-child(1){
+  float:left;
+}
+.nav-col ul li:nth-child(2){
+  float:left;
+}
+.nav-col ul li:nth-child(3){
+  float:left;
+}
+/* .nav-col ul li:nth-child(4){
+  float:center;
+} */
+.nav-col ul li a{
+  display:block;
+  padding:1rem 2rem;
+  font-family: Dosis;
+  font-size: 15px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 0.75px;
+  text-align: left;
+  color: var(--white-five);
 
+}
+#logo-area{
+  position:absolute;
+  left: 42%;
+  top:0;
+  padding:1rem;
+  font-family: Dosis;
+  font-size: 15px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 0.75px;
+  text-align: left;
+  color: var(--white-five);
+  
+}
 .nav-bar-col-2{
   background-color:black;
 }
@@ -117,5 +174,16 @@ h4{
     letter-spacing: normal;
     text-align: left;
     color: #666666;
+  }
+
+  /***
+Media queries for nav bar
+
+  ***/
+
+  /* Small Screens */
+@media only screen and (min-width:568px){
+  .mobile-screen{
+    display:none;
   }
 }

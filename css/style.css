@@ -2,12 +2,15 @@
 
 :root{
   --white-four:#e5e5e5;
+  --black:#2d2827;
+  font-size: 1vw;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 *{
   box-sizing:border-box;
 }
 body{
-  background-color:black;
+  background-color:yellow;
 }
 h1,
 h2,
@@ -17,10 +20,10 @@ h4{
 }
 /* .header-top{
   position:fixed;
-  top:0; */
+  top:0;
 }
 .header-top-row1{
-    /* width: 100%; */
+    width: 100%;
     height: 3.3125rem;
     background-color:black;
     color:grey;
@@ -38,7 +41,7 @@ h4{
 .header-top-news p {
     margin-left:auto;
     margin-right:auto;
-    /* width:50%; */
+    
     height:17%;
     font-family: SourceSansPro;
     font-size: 0.75rem;
@@ -81,9 +84,7 @@ h4{
 .nav-col ul li:nth-child(3){
   float:left;
 }
-/* .nav-col ul li:nth-child(4){
-  float:center;
-} */
+
 .nav-col ul li a{
   display:block;
   padding:1rem 2rem;
@@ -122,9 +123,8 @@ h4{
   justify-content: space-evenly;
 }
 .banner-image{
-  /* margin-top:2500px; */
   background: url(../images/open_delta.png)
-}
+} */
 
 
 
@@ -134,9 +134,9 @@ h4{
 
 
 
-.footer-top{
+/* .footer-top{
   margin-top:1000px;
-  /* height:21.25rem; */
+  
   background-color:#2d2827;
 }
 .footer-top-heading{
@@ -189,12 +189,119 @@ h4{
     letter-spacing: normal;
     text-align: left;
     color: #666666;
-  }
+  } */
 
-  /***
-Media queries for nav bar
+footer{
+  position: fixed;
+  bottom:0;
+  width:100%;
+  background-color: #999999;
+}
+.footer-top{
+  color:white;
+  display:grid;
+  grid-template-columns: 4fr 2fr 2fr 4fr;
+  grid-template-rows: 18vw;
+  font-family: 'Source Sans Pro', sans-serif;
+  
+}
+#footerCol1{
+  grid-column-start: 1;
+  grid-column-end:1;
+  background:red;
+}
+#footerCol2{
+  grid-column-start: 2;
+  grid-column-end:2;
+  background:blue;
+  text-align: center;
+}
+#footerCol3{
+  grid-column-start: 3;
+  grid-column-end:3;
+  text-align: center;
+  background:rgb(52, 52, 68);
+}
+#footerCol4{
+  grid-column-start: 4;
+  grid-column-end:4;
+  background:red;
+}
+.footer-top-col{
+background-color:var(--black);
+}
+.footer-top-heading{
+  margin-top:3vw;
+  font-size:2rem;
+  font-size: 18px;
 
-  ***/
+  
+}
+.footer-top-heading-1{
+  margin-top:3vw;
+  font-size:2rem;
+  padding-left:25rem;
+}
+.footer-top-heading-2{
+  margin-top:3vw;
+  font-size:2rem;
+  
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.33;
+  letter-spacing: normal;
+  text-align: center;
+  color: var(--white-four);
+}
+.footer-top-heading-3{
+  margin-top:3vw;
+  font-size:2rem;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.33;
+  letter-spacing: normal;
+  text-align: center;
+  color: var(--white-four);
+}
+.footer-top-heading-4{
+  margin-top:3vw;
+  font-size:2rem;
+  padding-left:2rem;
+}
+.footer-top-content{
+  margin-top:3vw;
+  background:green;
+  
+}
+
+.footer-top-content ul{
+  list-style-type:none;
+  margin-left:auto;
+  margin-right:auto;
+  background: brown;
+}
+/* .footer-top-content a{
+    width: 1rem;
+    font-family: SourceSansPro;
+    font-size:1rem;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.6;
+    letter-spacing: normal;
+    text-align: left;
+    color: #999999; */
+}
+
+
+.footer-bottom{
+  background-color:var(--white-four);
+  text-align: center;
+  height: 4vw;
+}
+  /***Media queries for nav bar***/
 
   /* Small Screens */
 @media only screen and (min-width:568px){

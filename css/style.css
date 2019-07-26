@@ -3,6 +3,7 @@
 :root{
   --white-four:#e5e5e5;
   --black:#2d2827;
+  --black-three:#333333;
   font-size: 1vw;
   font-family: 'Source Sans Pro', sans-serif;
 }
@@ -12,11 +13,27 @@
 body{
   background-color:yellow;
 }
+
 h1,
 h2,
 h3,
 h4{
   font-family:SourceSansPro;
+}
+
+.heading-2{
+  width: 15vw;
+  height: 3vw;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 3vw;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.33;
+  letter-spacing: normal;
+  text-align: center;
+  color: var(--black-three);
+  
 }
 /* .header-top{
   position:fixed;
@@ -196,15 +213,20 @@ h4{
   height:35vw;
   margin-bottom:0;
   display:grid;
-  grid-template-columns: 1fr 3fr 0.125fr 3fr 1fr;
-  grid-template-rows: 1.5fr 0.75fr 2.25fr 0.75fr 1.5fr;
+  grid-template-columns: 1fr 2fr 0.125fr 2fr 1fr;
+  grid-template-rows: 1.5fr 0.75fr 3fr 0.75fr 0.375fr;
 }
 #blogHeader{
   grid-column-start: 1;
   grid-column-end:5;
   grid-row-start: 1;
   grid-row-end:1;
-
+  justify-self: center;
+  margin-top:1rem;
+  text-transform: uppercase;
+}
+#blogHeader hr{
+  width:50%;
 }
 #blogImageContainer{
   grid-column-start: 2;
@@ -213,19 +235,42 @@ h4{
   grid-row-end:4;
   background: var(--black);
 }
-#blogTitle{
+#blogTitleContainer{
   grid-column-start: 4;
   grid-column-end:4;
   grid-row-start: 2;
   grid-row-end:2;
 }
-#blogArticle{
+#blogTitle{
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1.5vw;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.92;
+  letter-spacing: normal;
+  text-align: left;
+  color: var(--black-three);
+}
+#blogDate{
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1vw;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 3.2;
+  letter-spacing: normal;
+  text-align: left;
+  color: #999999;
+}
+#blogArticleContainer{
   grid-column-start: 4;
   grid-column-end:4;
   grid-row-start: 3;
   grid-row-end:3;
   background:var(--black);
 }
+
 #blogReadMe{
   grid-column-start: 4;
   grid-column-end:4;
@@ -333,15 +378,22 @@ background-color:var(--black);
 }
 .footer-top-content{
   margin-top:3vw;
-  background:green;
-  
 }
-
 .footer-top-content ul{
   list-style-type:none;
+}
+.footer-top-content ul li a{
   margin-left:auto;
   margin-right:auto;
-  background: brown;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1vw;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.6;
+  letter-spacing: normal;
+  text-align: left;
+  color: #999999;
 }
 
 #instagramBlock{

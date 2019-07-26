@@ -242,11 +242,20 @@ background-color:var(--black);
   margin-top:3vw;
   font-size:2rem;
   padding-left:25rem;
+  display:flex;
+  justify-content: flex-end;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.33;
+  letter-spacing: normal;
+  text-align: center;
+  color: var(--white-four);
+
 }
 .footer-top-heading-2{
   margin-top:3vw;
   font-size:2rem;
-  
   font-weight: bold;
   font-style: normal;
   font-stretch: normal;
@@ -270,6 +279,15 @@ background-color:var(--black);
   margin-top:3vw;
   font-size:2rem;
   padding-left:2rem;
+  display: flex;
+  justify-content: flex-start;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.33;
+  letter-spacing: normal;
+  text-align: center;
+  color: var(--white-four);
 }
 .footer-top-content{
   margin-top:3vw;
@@ -289,7 +307,6 @@ background-color:var(--black);
   margin-left:2rem;
   width: 75%;
   height:37.5%;
-  
   display:grid;
   background-color:var(--black);
   grid-template-columns: 4fr 1fr 4fr 1fr 4fr 1fr 4fr;

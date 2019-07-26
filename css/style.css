@@ -203,29 +203,30 @@ footer{
   grid-template-columns: 4fr 2fr 2fr 4fr;
   grid-template-rows: 18vw;
   font-family: 'Source Sans Pro', sans-serif;
+  background-color: var(--black);
   
 }
 #footerCol1{
   grid-column-start: 1;
   grid-column-end:1;
-  background:red;
+  
 }
 #footerCol2{
   grid-column-start: 2;
   grid-column-end:2;
-  background:blue;
+  
   text-align: center;
 }
 #footerCol3{
   grid-column-start: 3;
   grid-column-end:3;
   text-align: center;
-  background:rgb(52, 52, 68);
+  
 }
 #footerCol4{
   grid-column-start: 4;
   grid-column-end:4;
-  background:red;
+  
 }
 .footer-top-col{
 background-color:var(--black);
@@ -282,6 +283,81 @@ background-color:var(--black);
   margin-right:auto;
   background: brown;
 }
+
+#instagramBlock{
+  margin-top:0rem;
+  margin-left:2rem;
+  width: 75%;
+  height:37.5%;
+  
+  display:grid;
+  background-color:var(--black);
+  grid-template-columns: 4fr 1fr 4fr 1fr 4fr 1fr 4fr;
+  grid-template-rows: 4fr 1fr 4fr;
+  column-gap: 1fr;
+  row-gap: 1fr;
+
+}
+#footerImage1{
+  grid-column-start: 1;
+  grid-column-end:1;
+  grid-row-start:1;
+  grid-row-end:1;
+  background:var(--white-four);
+}
+#footerImage2{
+  grid-column-start: 3;
+  grid-column-end:3;
+  grid-row-start:1;
+  grid-row-end:1;
+  background:var(--white-four);
+}
+#footerImage3{
+  grid-column-start: 5;
+  grid-column-end:5;
+  grid-row-start:1;
+  grid-row-end:1;
+  background:var(--white-four);
+}
+#footerImage4{
+  grid-column-start: 7;
+  grid-column-end:7;
+  grid-row-start:1;
+  grid-row-end:1;
+  background:var(--white-four);
+}
+#footerImage5{
+  grid-column-start: 1;
+  grid-column-end:1;
+  grid-row-start:3;
+  grid-row-end:3;
+  background:var(--white-four);
+}
+#footerImage6{
+  grid-column-start: 3;
+  grid-column-end:3;
+  grid-row-start:3;
+  grid-row-end:3;
+  background:var(--white-four);
+}
+#footerImage7{
+  grid-column-start: 5;
+  grid-column-end:5;
+  grid-row-start:3;
+  grid-row-end:3;
+  background:var(--white-four);
+}
+#footerImage8{
+  grid-column-start: 7;
+  grid-column-end:7;
+  grid-row-start:3;
+  grid-row-end:3;
+  background:var(--white-four);
+}
+/* .footer-image-container{
+  background:blue;
+} */
+
 /* .footer-top-content a{
     width: 1rem;
     font-family: SourceSansPro;
@@ -292,8 +368,7 @@ background-color:var(--black);
     line-height: 1.6;
     letter-spacing: normal;
     text-align: left;
-    color: #999999; */
-}
+    color: #999999; }*/
 
 
 .footer-bottom{

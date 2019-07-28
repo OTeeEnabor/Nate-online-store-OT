@@ -360,7 +360,30 @@ header{
   background:var(--black-three);
   width:100%;
   height:40vw;
-  
+  display:grid;
+  grid-template-columns:1fr;
+  grid-template-rows:1fr 1fr 1fr;
+}
+#bannerImageHeading{
+  grid-column-start: 1;
+  grid-column-end:1;
+  grid-row-start:1;
+  grid-row-end:1;
+}
+#bannerImageDescription{
+  grid-column-start:1;
+  grid-column-end:1;
+  grid-row-start: 2;
+  grid-row-end:2;
+}
+#bannerImageBtn{
+  grid-column-start:1;
+  grid-column-end:1;
+  grid-row-start: 3;
+  grid-row-end:3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .blog-container{
   background-color: var(--white-four);
@@ -761,4 +784,71 @@ background-color:var(--black);
   .mobile-screen{
     display:none;
   }
+}
+
+/* About US Styling starts here*/
+
+.about-image-container{
+  width:100%;
+  height:30vw;
+  background:blueviolet;
+}
+.about-sec{
+  width:100%;
+  height:45vw;
+  background:var(--white-four);
+}
+.who-we-are{
+  display:grid;
+  grid-template-columns: 1fr 1.5fr 2fr 1fr;
+  grid-template-rows: 0.5fr 0.75fr 2fr 1.25fr;
+  background: red;
+}
+#whoWeAreTitle{
+  grid-column-start:2;
+  grid-column-end:2;
+  grid-row-start: 2;
+  grid-row-end:2;
+}
+#whoWeAreText{
+  grid-column-start: 2;
+  grid-column-end:2;
+  grid-row-start:3;
+  grid-row-end:3;
+  background:whitesmoke;
+}
+#whoWeAreImage{
+  grid-column-start: 3;
+  grid-column-end:3;
+  grid-row-start:2;
+  grid-row-end:4;
+  background:var(--black);
+}
+.meet-team{
+  background:yellow;
+}
+.what-we-do{
+  display:grid;
+  grid-template-columns: 1fr 3fr 3fr 1fr;
+  grid-template-rows:0.5fr 2fr 0.5fr;
+}
+#whatWeDoTitle{
+  grid-column-start:3;
+  grid-column-end:3;
+  grid-row-start:1;
+  grid-row-end:1;
+}
+#whatWeDoImage{
+  grid-column-start:2;
+  grid-column-end:2;
+  grid-row-start: 1;
+  grid-row-end:3;
+  background: var(--black);
+}
+#whatWeDoText{
+  grid-column-start:3;
+  grid-column-end:3;
+  grid-row-start:2;
+  grid-row-end:2;
+  background:blueviolet;
 }

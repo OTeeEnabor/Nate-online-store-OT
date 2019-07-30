@@ -35,6 +35,21 @@ h4{
   color: var(--black-three);
   
 }
+.heading-3{
+  height: 2vw;
+  text-transform: uppercase;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size:1.5vw;
+  font-weight:normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  text-align: center;
+  color: var(--black-three);
+  
+}
+
 /* .header-top{
   position:fixed;
   top:0;
@@ -203,7 +218,7 @@ header{
 .navigation{
   width:100%;
   height:5vw;
-  background:var(--black-three);
+  background:transparent;
   display:grid;
   grid-template-columns: 1fr 4fr 1fr;
   grid-template-rows:1fr;
@@ -250,6 +265,21 @@ header{
   display:grid;
   grid-template-columns: 1fr;
   grid-template-rows:1fr;
+}
+.banner-image{
+  background:var(--black-three);
+  width:100%;
+  height:40vw;
+  display:grid;
+  grid-template-columns:1fr;
+  grid-template-rows:1fr 1fr 1fr;
+}
+#homeImage{
+  background-image: url(../images/home-page-1.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top:5vw;
 }
 .featured-product{
   width:100%;
@@ -874,4 +904,54 @@ background-color:var(--black);
   grid-row-start:2;
   grid-row-end:2;
   background:blueviolet;
+}
+
+/* Shop page styling */
+
+.shop-section{
+  width:100%;
+
+  background:whitesmoke;
+}
+.shop-item{
+  width:100%;
+  height:30vw;
+  display:grid;
+  grid-template-columns: 1fr 0.5fr 2fr 0.5fr 0.5fr;
+  grid-template-rows: 1fr 2fr 1fr 1.5fr;
+}
+.shop-item-heading{
+  grid-column: 3 / 3;
+  grid-row: 1 / 1 ;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+.shop-image{
+  grid-column: 3 / 3;
+  grid-row: 2 / 2 ;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+.shop-descrip{
+  grid-column: 2 / 5;
+  grid-row: 3 / 3 ;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+.shop-price{
+  grid-column: 4 / 4;
+  grid-row: 4 / 4 ;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+.shop-button{
+  grid-column: 5 / 5;
+  grid-row: 4 / 4 ;
+  display:flex;
+  justify-content: center;
+  align-items: center;
 }

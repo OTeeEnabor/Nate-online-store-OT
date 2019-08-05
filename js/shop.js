@@ -23,11 +23,10 @@ Product.prototype.description = function () {
 };
 
 Product.prototype.createHtml = function() {
-    const shop = document.getElementById('shopSection');
+    const shop = document.getElementById('Row');
     const shopItem = document.createElement("div");
-    shopItem.classList.add("contianer","shop-item");
-    shopItem.innerHTML = `<div class="row">
-    <div class="col-sm-12 col-lg-12 shop-product">
+    shopItem.classList.add("col-sm-12","col-lg-12",'shop-product');
+    shopItem.innerHTML = `
            <div class="card" style="width: 20rem;">
                 <img src="${this.path}" class="card-img-top" alt="...">
                 <div class="card-body">
@@ -36,9 +35,7 @@ Product.prototype.createHtml = function() {
                     <p class="card-text item-description">${this.description}</p>
                     <a href="#" class="btn shop-button"><i class='fas fa-shopping-cart'></i>Add to cart</a>
                 </div>
-           </div>
-    </div>
-</div>`;
+           </div>`;
     // `        <div class="row">
     //                 <div class=" col-sm-12 col-md-offset-2 col-lg-4 shop-image">
     //                     <img class="image"src="${this.path}">

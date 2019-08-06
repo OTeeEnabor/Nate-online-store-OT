@@ -278,10 +278,32 @@ header{
 #centerHeading{
   display:flex;
   justify-content: center;
+  align-items:center;
 }
 #centerHeader{
   display:flex;
   justify-content: center;
+  align-items:center;
+  padding:1rem 1rem;
+  font-family: 'Dosis', sans-serif;
+  font-size: 1rem;
+  font-weight: bolder;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 0.05rem;
+  text-transform:uppercase;
+  color: var(--white-four);
+}
+#rightHeader{
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  margin-right:5rem;
+}
+#rightHeader a{
+
+  padding:1rem
 }
 #rightHeading{
   display:flex;
@@ -316,19 +338,23 @@ header{
 #centerNav ul li:nth-child(3){
   float:left;
 }
+#centerNav ul li:nth-child(4){
+  margin-right:6rem;
+}
 
 #centerNav ul li a{
   display:block;
   padding:1rem 2rem;
-  font-family: Dosis;
-  font-size: 1.5rem;
-  font-weight: normal;
+  font-family: 'Dosis', sans-serif;
+  font-size: 1.2rem;
+  font-weight: bolder;
   font-style: normal;
   font-stretch: normal;
   line-height: normal;
-  letter-spacing: 0.75px;
+  letter-spacing: 0.05rem;
   text-align: left;
-  color: var(--white-five);
+  text-transform:uppercase;
+  color: var(--white-four);
 
 }
 .home-image{

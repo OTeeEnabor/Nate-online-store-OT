@@ -1,3 +1,98 @@
+/*Shop item title*/
+.shop-item-title{
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 2vw;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 2.4;
+  letter-spacing: normal;
+  text-align: center;
+  color: var(--black-three);
+}
+
+/*Cart heading positioning styling*/
+.cart-item-head{
+  display: flex;
+  justify-content: center;
+}
+.cart-price-head{
+  display: flex;
+  justify-content: center;
+}
+.cart-quantity-head{
+  display: flex;
+  justify-content: center;
+}
+.cart-item-image{
+  width: 10rem;
+  height: 10rem;
+  border-radius:10%;
+}
+/*Cart heading font styling*/
+.cart-heading{
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 2vw;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 2.4;
+  letter-spacing: normal;
+  text-align: center;
+  color: var(--black-three);
+}
+/* Cart inner text styling*/
+.cart-text{
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1.5vw;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 2.4;
+  letter-spacing: normal;
+  text-align: center;
+  color: var(--black-three);
+}
+/* Cart Content Styling*/
+.cart-price{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+/*Cart Row Styling*/
+.cart-item-row{
+  margin-top:2rem;
+}
+.cart-quantity{
+  margin-top:3rem;
+}
+/*Cart total styling*/
+.cart-total{
+  display: flex;
+  justify-content: center;
+}
+.cart-total-heading{
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 2vw;
+  font-weight: bolder;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 2.4;
+  letter-spacing: normal;
+  text-align: center;
+  color: var(--black-three);
+}
+.cart-total-amount{
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1.5vw;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 2.4;
+  letter-spacing: normal;
+  text-align: center;
+  color: var(--black-three);
+}
 /* Pagination links */
 .pagination a {
   color: black;

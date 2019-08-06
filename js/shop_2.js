@@ -23,22 +23,19 @@ Product.prototype.description = function () {
 };
 
 Product.prototype.createHtml = function() {
-    const shop = document.getElementById('shopSection');
+    const shop = document.getElementById('Row');
     const shopItem = document.createElement("div");
-    shopItem.classList.add("contianer","shop-item");
-    shopItem.innerHTML = `<div class="row">
-    <div class="col-sm-12 col-lg-12 shop-product">
+    shopItem.classList.add("col-3",'shop-product');
+    shopItem.innerHTML = `
            <div class="card" style="width: 20rem;">
                 <img src="${this.path}" class="card-img-top" alt="...">
                 <div class="card-body">
-                    <h5 class="card-title heading-3">${this.name}</h5>
+                    <h5 class="card-title shop-item-title">${this.name}</h5>
                     <p class="card-text currency"><span class="currency">R </span>${this.price}</p>
                     <p class="card-text item-description">${this.description}</p>
-                    <a href="#" class="btn shop-button"><i class='fas fa-shopping-cart'></i>Add to cart</a>
+                    <button class="btn shop-button" type="button"><i class='fas fa-shopping-cart'></i>Add to cart</button>
                 </div>
-           </div>
-    </div>
-</div>`;
+           </div>`;
     // `        <div class="row">
     //                 <div class=" col-sm-12 col-md-offset-2 col-lg-4 shop-image">
     //                     <img class="image"src="${this.path}">
@@ -68,11 +65,10 @@ Product.prototype.createHtml = function() {
     //                 </div>      
     //     </div>
     //     `;
-    console.log(shopItem);
+    // console.log(shop);
     shop.appendChild(shopItem);
     // return shopItem;
 };
-
 // //
 //
 // let jacket_2 = new Product('Leather Jacket',500,'Freedom','/images/products/jackets/jacket_2.jpg');
@@ -94,9 +90,9 @@ Product.prototype.createHtml = function() {
 
 // console.log(jean);
 
-let blue_denm = new  Product ('Blue Denim Jacket',500,"Freedom","/images/featured_product_1.jpeg");
+let blue_denm = new  Product ('Denim Jacket',500,"Freedom","/images/featured_product_1.jpeg");
 let rainbow_jack = new Product('Rainbow Jacket', 1500, 'Rainbow Free','/images/featured_product_2.jpeg');
-let dark_jacket = new Product('Dark Blue Denim Jacket', 1000,"Denim Blue",'/images/featured_product_3.jpeg');
+let dark_jacket = new Product('Dark Blue Jacket', 1000,"Denim Blue",'/images/featured_product_3.jpeg');
 let jacket_2 = new Product('Leather Jacket',500,'Freedom','/images/products/jackets/jacket_2.jpg');
  
 const jacket = new Array();
@@ -141,3 +137,68 @@ for (i=0; i < jacket.length ;i++){
 
 //     boot[i].createHtml();
 // }
+// add items to the cart function
+(function(){
+    const cartButton = document.querySelectorAll('.shop-button');
+    cartButton.forEach (function(button){
+        button.addEventListener('click', function(event) {
+            if (event.target.parentElement.classList.contains("card-body")){
+    
+                let fullPath= event.target.parentElement.previousElementSibling.src;//get the path of the image file associated with this button
+                let pos = fullPath.indexOf("images");
+                let partPath = fullPath.slice(pos);
+                console.log(partPath);
+                //Create cart item object
+                const item = {};
+                item.img = partPath; //cart item image given a path
+                let name = event.target.previousElementSibling.previousElementSibling.previousElementSibling.innerText;
+                item.name = name;
+                let price = parseFloat(event.target.previousElementSibling.previousElementSibling.innerText.replace('R',''));
+                item.price=price;
+    
+                const cartItem = document.createElement("div");
+                cartItem.classList.add('row','cart-item-row')
+                cartItem.innerHTML = `
+                 
+                    <div class="col-4 cart-item">
+                        <img class="cart-item-image"src="${item.img}">
+                        <span class="cart-text cart-item-title">${item.name}</span>
+                    </div>
+                    <div class=" col-4 cart-price">
+                        <span class=" cart-text cart-item-price">R${item.price}</span>
+                    </div>
+                    <div class="col-4 cart-quantity">
+                        <div class="quantity-container">
+                                <input class="cart-quantity" type="number" value="1">
+                                <button class="btn shop-button cart-button cart-text" type="button">Remove Item</button>
+                        </div>
+                        
+                    </div>
+                </div>
+                `;
+                //Select the cart
+    
+                const cartSection = document.getElementById('cartSection');
+                console.log(cartSection)
+                const cartTotal = document.getElementById('cartTotal');
+                console.log(cartTotal)
+                cartSection.insertBefore(cartItem,cartTotal);
+    
+                alert('Item has been added to cart:)')
+            };        
+    
+        });
+    
+    });
+    
+    })();
+    
+    var removeCartButtons = document.getElementsByClassName('cart-button')
+    for (var i = 0; i < removeCartButtons.length;i++) {
+        var button = removeCartButtons[i]
+        button.addEventListener('click', function(event){
+            var buttonClicked = event.target
+            buttonClicked.parentElement.parentElement.parentElement.remove()
+            updateCartTotal()
+        })
+    }

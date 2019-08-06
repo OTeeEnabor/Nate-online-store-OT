@@ -11,7 +11,7 @@
     <link rel="stylesheet"  href="css/shop_pagination.css" type="text/css">
     <title>Shop</title>
 </head>
-<body>
+<body style="background-color:antiquewhite;">
     <header>
         <!--Top section of the navigation bar-->
         <div class="header-top">
@@ -38,8 +38,8 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="shop.html">shop</a></li>
                     <li><a href="about.html" target="_self">about</a></li>
-                    <li><a href="">blog</a></li>
-                    <li><a href="">contact</a></li>
+                    <li><a href="blog.html">blog</a></li>
+                    <li><a href="contact.html">contact</a></li>
                     <li><a href="lookbook.html">logbook</a></li>
 
                 </ul>
@@ -51,10 +51,35 @@
     </header>
     <div class="shop-banner-image">
       <img src="/images/shop_background.jpg" id="shopBg">
-    </div>S
+    </div>
+    <!--Start of Shop Section-->
     <section id="shopSection"class="shop-section">
+        <div class="container-fluid">
+            <div id="Row" class="row">
 
+            </div>
+        </div>
     </section>
+    <!--End of Shop Section-->
+    <!--Start of Cart Section-->
+    <section class="cart">
+            <div id="cartSection" class="container-fluid">
+                <div class="row">
+                    <div class="col-4 cart-heading cart-item-head">ITEM</div>
+                    <div class="col-4 cart-heading cart-price-head">PRICE</div>
+                    <div class="col-4 cart-heading price-quantity-head">QUANTITY</div>
+                </div>
+                <!--Start of cart Items-->
+                <!--  -->
+                <!--End of Cart Items-->
+                <!--Cart Total-->
+                <div id="cartTotal"class="row cart-total-row">
+                    <div class="col-12 cart-total">
+                        <span class="cart-total-heading">Total Amount:</span><span class="cart-total-amount"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
   
     <div> 
     <div class="pagination">

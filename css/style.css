@@ -8,6 +8,7 @@
   --mushroom:#ac907f;
   font-size: 1vw;
   font-family: 'Source Sans Pro', sans-serif;
+  scroll-behavior: smooth;
 }
 *{
   box-sizing:border-box;
@@ -636,7 +637,15 @@ header{
   grid-row-start: 4;
   grid-row-end:4;
 }
-
+.back-to-top{
+  background-color:var(--white-four);
+  padding:1rem;
+  display: none;
+  position: fixed;
+  bottom: 5vw;
+  right: 10vw;
+  z-index: 99;
+}
 footer{
   position: static;
   bottom:0;

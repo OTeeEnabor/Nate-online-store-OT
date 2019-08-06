@@ -15,7 +15,12 @@
 body{
   background-color:whitesmoke;
 }
-
+.hr_1{
+  width:50%;
+  margin-top:2rem;
+  border: 0.25rem solid var(--black-three);
+  border-radius: 5px;
+}
 h1,
 h2,
 h3,

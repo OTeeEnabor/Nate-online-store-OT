@@ -24,10 +24,10 @@
                 FREE SHIPPING FOR ORDERS OVER R200
             </div>
             <div id="rightHeader">
-                <a href ="" target="\self"><i class="fab fa-facebook-f"></i> </a>
-                <a href=""target="\self"><i class="fab fa-google-plus"></i></a>
-                <a href=""target="\self"><i class="fab fa-twitter"></i></a>
-                <a href=""target="\self"><i class="fab fa-pinterest"></i></a>
+                <a href ="www.facebook.com" target="\self"><i class="fab fa-facebook-f"></i> </a>
+                <a href="www.google.com"target="\self"><i class="fab fa-google-plus"></i></a>
+                <a href="www.twitter.com"target="\self"><i class="fab fa-twitter"></i></a>
+                <a href="www.pinterest.com"target="\self"><i class="fab fa-pinterest"></i></a>
             </div>
         </div>
         <!--Bottom section of the navigation bar-->
@@ -51,7 +51,7 @@
             </div>
         </nav>
     </header>
-    <div class="shop-banner-image">
+    <div id="shopBanner" class="shop-banner-image">
       <img src="/images/shop_background.jpg" id="shopBg">
     </div>
     <section id="shopSection"class="shop-section">
@@ -70,22 +70,25 @@
                 <div class="col-4 cart-heading price-quantity-head">QUANTITY</div>
             </div>
             <!--Start of cart Items-->
-            <div class="row cart-item-row">
-                <div class="col-4 cart-item">
-                    <img class="cart-item-image"src="../images/products/jeans/jeans_1.jpg">
-                    <span class="cart-text cart-item-title">Dark Biker Jeans</span>
-                </div>
-                <div class=" col-4 cart-price">
-                    <span class=" cart-text cart-item-price">R550</span>
-                </div>
-                <div class="col-4 cart-quantity">
-                    <div class="quantity-container">
-                            <input class="cart-quantity" type="number" value="1">
-                            <button class="btn shop-button cart-button cart-text" type="button">Remove Item</button>
+            <!-- <div class="cart-items-container">
+                <div class="row cart-item-row">
+                    <div class="col-4 cart-item">
+                        <img class="cart-item-image"src="../images/products/jeans/jeans_1.jpg">
+                        <span class="cart-text cart-item-title">Dark Biker Jeans</span>
                     </div>
-                    
+                    <div class=" col-4 cart-price">
+                        <span class=" cart-text cart-item-price">R550</span>
+                    </div>
+                    <div class="col-4 cart-quantity">
+                        <div class="quantity-container">
+                                <input class="cart-quantity" type="number" value="1">
+                                <button class="btn shop-button cart-button cart-text" type="button">Remove Item</button>
+                        </div>
+                        
+                    </div>
                 </div>
-            </div>
+            </div> -->
+            
             <!--End of Cart Items-->
             <!--Cart Total-->
             <div id="cartTotal"class="row cart-total-row">
@@ -95,16 +98,17 @@
             </div>
         </div>
     </section>
+    <a id="scrollBtn" href="#shopBanner" class="btn shop-button back-to-top">Back To Top</a>
     <div> 
-    <div class="pagination">
-        <a href="#">&laquo;</a>
-        <a href="shop.html" target="\self">1</a>
-        <a class="active" href="shop_2.html"target="\self">2</a>
-        <a href="shop_3.html"target="\self">3</a>
-        <a href="shop_4.html"target="\self">4</a>
-        <a href="#">&raquo;</a>
-</div>
-    </div>    
+        <div class="pagination">
+            <a href="#">&laquo;</a>
+            <a href="shop.html" target="\self">1</a>
+            <a class="active" href="shop_2.html"target="\self">2</a>
+            <a href="shop_3.html"target="\self">3</a>
+            <a href="shop_4.html"target="\self">4</a>
+            <a href="#">&raquo;</a>
+        </div>
+    </div>   
     <footer>
             <div class="footer-top">
                 <div id="footerCol1" class="footer-top-col">
@@ -202,6 +206,7 @@
     
         </footer>
 <script src="js/shop.js"></script>
+<script src ="js/scrolltop.js"></script>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>

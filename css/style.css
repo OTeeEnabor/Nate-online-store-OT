@@ -346,11 +346,17 @@ header{
 }
 #centerNav ul li:nth-child(4){
   margin-right:6rem;
+  
+}
+#centerNav ul li:nth-child(4) a{
+  
+  font-size:1.5rem;
+  
 }
 
 #centerNav ul li a{
   display:block;
-  padding:1rem 2rem;
+  padding:0rem 1rem;
   font-family: 'Dosis', sans-serif;
   font-size: 1.2rem;
   font-weight: bolder;
@@ -363,6 +369,9 @@ header{
   color: var(--white-four);
 
 }
+
+/*                       Styling for the Home Page                 */
+
 .home-image{
   width:100%;
   margin-top:10vw;
@@ -389,6 +398,28 @@ header{
   justify-content: center;
   align-items: center;
 }
+#homeHeading{
+  grid-column-start: 1;
+  grid-column-end:1;
+  grid-row-start:1;
+  grid-row-end:1;
+}
+#homeDescription{
+  grid-column-start:1;
+  grid-column-end:1;
+  grid-row-start: 2;
+  grid-row-end:2;
+}
+#homeBtn{
+  grid-column-start:1;
+  grid-column-end:1;
+  grid-row-start: 3;
+  grid-row-end:3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/*Stylig for the featured product section of the home page*/
 .featured-product{
   width:100%;
   height:40vw;
@@ -396,6 +427,7 @@ header{
   display:grid;
   grid-template-columns: 1fr 4fr 0.25fr 4fr 0.25fr 4fr 1fr;
   grid-template-rows: 1fr 3fr 1fr;
+  margin-top:5rem;
 }
 #productHeading{
   grid-column-start:1;
@@ -454,6 +486,7 @@ header{
   grid-row-start:3;
   grid-row-end:3;
 }
+/*Styling for the new collection section of the home page*/
 .new-collection{
   width:100%;
   height:40vw;
@@ -461,6 +494,7 @@ header{
   display:grid;
   grid-template-columns: 1fr 4fr 0.125fr 4fr 1fr;
   grid-template-rows: 1fr 3fr 1fr;
+  margin-top:5rem;
 }
 #collectionHeading{
   grid-column-start: 2;
@@ -512,6 +546,7 @@ header{
   padding:5%;
   
 }
+/*Styling for the new products section*/
 .banner-image{
   width:100%;
   height:40vw;
@@ -522,6 +557,7 @@ header{
   background-position:center;
   background-repeat: no-repeat;
   background-size:cover;
+  margin-top:5rem;
 }
 
 #bannerImageHeading{
@@ -545,28 +581,8 @@ header{
   justify-content: center;
   align-items: center;
 }
-#homeHeading{
-  grid-column-start: 1;
-  grid-column-end:1;
-  grid-row-start:1;
-  grid-row-end:1;
-}
-#homeDescription{
-  grid-column-start:1;
-  grid-column-end:1;
-  grid-row-start: 2;
-  grid-row-end:2;
-}
-#homeBtn{
-  grid-column-start:1;
-  grid-column-end:1;
-  grid-row-start: 3;
-  grid-row-end:3;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* width:1vw; */
-}
+
+/*Styling for the Blog Section of the home page*/
 .blog-container{
   background-color: var(--white-four);
   width:100%;
@@ -575,6 +591,7 @@ header{
   display:grid;
   grid-template-columns: 1fr 2fr 0.125fr 2fr 1fr;
   grid-template-rows: 1.5fr 0.75fr 3fr 0.75fr 0.375fr;
+  margin-top:5rem;
 }
 #blogHeader{
   grid-column-start: 1;
@@ -979,6 +996,9 @@ background-color:var(--black);
 
 
 .footer-bottom{
+  display:flex;
+  justify-content: center;
+  align-items: center;
   background-color:var(--white-four);
   text-align: center;
   height: 4vw;

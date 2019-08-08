@@ -5,6 +5,28 @@ h2styles.forEach(h2stlye => {
 
     h2stlye.classList.add('heading-2')
 });
+//Create a read more function the blog
+function readMore() {
+    var extra = document.getElementById("extra");
+    var moreText = document.getElementsByClassName("more-text");
+    console.log(moreText)
+    var btnText = document.getElementById("readBtn");
+  
+    if (extra.style.display === "none") {
+      extra.style.display = "inline";
+      btnText.innerHTML = "Read more"; 
+      for (var i=0;i<moreText.length;i+=1){
+        moreText[i].style.display = 'none';
+      }
+    } else {
+      extra.style.display = "none";
+      btnText.innerHTML = "Read less"; 
+      for (var i=0;i<moreText.length;i+=1){
+        moreText[i].style.display = 'block';
+      }
+    }
+  }
+
 
 //create a product object using constructor function
 function Product(name, price,brand,path) {
@@ -33,7 +55,7 @@ Product.prototype.createHtml = function() {
                     <h5 class="card-title shop-item-title">${this.name}</h5>
                     <p class="card-text currency"><span class="currency">R </span>${this.price}</p>
                     <p class="card-text item-description">${this.description}</p>
-                    <button class="btn shop-button" type="button"><i class='fas fa-shopping-cart'></i>Add to cart</button>
+                    <button class="btn shop-button" type="button onclick=removeCartItem(event)"><i class='fas fa-shopping-cart'></i>Add to cart</button>
                 </div>
            </div>`;
     
@@ -63,8 +85,8 @@ if (document.readyState == 'loading') {
 }
 
  function load() {
-    let removeButton = document.getElementsByClassName('cart-button')
- 
+
+    let removeButton = document.getElementsByClassName('cart-button');
     for (var i = 0; i < removeButton.length; i++) {
         var button = remoceCartItem[i]
         button.addEventListener('click',removeCartItem)
@@ -77,7 +99,7 @@ if (document.readyState == 'loading') {
 
     }
 
-    let addTocartButton = document.getElementsByClassName('shop-button')
+    let addTocartButton = document.getElementsByClassName('shop-button');
     for (var i = 0; i < addTocartButton.length; i++) {
         var button = addTocartButton[i]
         button.addEventListener('click',addToCart)
@@ -107,51 +129,58 @@ if (document.readyState == 'loading') {
  function addToCart(event){
      var button = event.target
      var shopItem = button.parentElement.classList.contains("card-body")
+     //Create cart item object
+     const item = {};
+     //  get the path of the image file associated with this button
      let fullPath= event.target.parentElement.previousElementSibling.src;
-    //  get the path of the image file associated with this button
-                 let pos = fullPath.indexOf("images");
-                 let partPath = fullPath.slice(pos);
-                 //Create cart item object
-                 const item = {};
-                 item.img = partPath; //cart item image given a path
-                 let name = event.target.previousElementSibling.previousElementSibling.previousElementSibling.innerText;
-                 item.name = name;
-                 let price = parseFloat(event.target.previousElementSibling.previousElementSibling.innerText.replace('R',''));
-                 item.price=price;
-     
-                 const cartItem = document.createElement("div");
-                 cartItem.classList.add('row','cart-item-row')
-                 cartItem.innerHTML = `
-                  
-                     <div class="col-4 cart-item">
-                         <img class="cart-item-image"src="${item.img}">
-                         <span class="cart-text cart-item-title">${item.name}</span>
-                     </div>
-                     <div class=" col-4 cart-price">
-                         <span class=" cart-text cart-item-price">R${item.price}</span>
-                     </div>
-                     <div class="col-4 cart-quantity">
-                         <div class="quantity-container">
-                                 <input class="cart-quantity" type="number" value="1">
-                                 <button class="btn shop-button cart-button cart-text" type="button">Remove Item</button>
-                         </div>
-                         
-                     </div>
-                 </div>
-                 `;
-                 //This code selects the names of items in the cart.
-                 let cartItemNames = document.getElementsByClassName('cart-item-title');
-                 //Loop through all the item names in the cart
-                  for (let i = 0; i < cartItemNames.length; i++) {
-                     if (cartItemNames[i].innerText == name){
-                         alert(`${item.name} has already been added to the cart, increase your quantity.`)
-                         return
-                     }
-                 }
-                 alert(`${item.name} has been added to the cart`)
-                 const cartSection = document.getElementById('cartSection');
-                 const cartTotal = document.getElementById('cartTotal');
-                 cartSection.insertBefore(cartItem,cartTotal);
+    let pos = fullPath.indexOf("images");
+    let partPath = fullPath.slice(pos);
+
+    item.img = partPath; //cart item image given a path
+    //get the name of the shop item associated with the add to cart button clicked
+    let name = event.target.previousElementSibling.previousElementSibling.previousElementSibling.innerText;
+    //Assign the name of the shop item to as a property of the item object
+    item.name = name;
+    //get the price of the shop item associated with the add to cart button clicked
+    let price = parseFloat(event.target.previousElementSibling.previousElementSibling.innerText.replace('R',''));
+    //Assign the price of the shop item clicked as a property of the item
+    item.price=price;
+     //Create a div container to place this cart item object
+    const cartItem = document.createElement("div");
+
+    cartItem.classList.add('row','cart-item-row');
+
+    cartItem.innerHTML = `
+        <div class="col-4 cart-item">
+            <img class="cart-item-image"src="${item.img}">
+            <span class="cart-text cart-item-title">${item.name}</span>
+        </div>
+        <div class=" col-4 cart-price">
+            <span class=" cart-text cart-item-price">R${item.price}</span>
+        </div>
+        <div class="col-4 cart-quantity">
+            <div class="quantity-container">
+                    <input class="cart-quantity" type="number" value="1">
+                    <button class="btn shop-button cart-button cart-text" type="button">Remove Item</button>
+            </div>
+            
+        </div>
+    </div>
+    `;
+    //This code selects the names of items in the cart.
+    let cartItemNames = document.getElementsByClassName('cart-item-title');
+
+    //Loop through all the item names in the cart
+    for (let i = 0; i < cartItemNames.length; i++) {
+        if (cartItemNames[i].innerText == name){
+            alert(`${item.name} has already been added to the cart, increase your quantity.`)
+            return
+        }
+    }
+    alert(`${item.name} has been added to the cart`);
+    const cartSection = document.getElementById('cartSection');
+    const cartTotal = document.getElementById('cartTotal');
+    cartSection.insertBefore(cartItem,cartTotal);
 
  }
 // // add items to the cart function

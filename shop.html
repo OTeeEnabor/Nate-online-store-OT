@@ -47,10 +47,13 @@
                 </ul>
             </div>
             <div id="rightNav">
-
+            <button type="button" class="btn nav-cart"><i class='fas fa-shopping-cart' style='font-size:2rem;color:grey;;'></i></button>
             </div>
+            
         </nav>
+        
     </header>
+   
     <div id="shopBanner" class="shop-banner-image">
         <p class="heading-1">shop</p>
       <img src="/images/shop_background.jpg" id="shopBg">
@@ -62,6 +65,39 @@
             </div>
         </div>
     </section>
+    <div class="container">
+        <h2>Modal Example</h2>
+        <!-- Button to Open the Modal -->
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+          Open modal
+        </button>
+      
+        <!-- The Modal -->
+        <div class="modal" id="myModal">
+          <div class="modal-dialog">
+            <div class="modal-content">
+            
+              <!-- Modal Header -->
+              <div class="modal-header">
+                <h4 class="modal-title">Modal Heading</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+              </div>
+              
+              <!-- Modal body -->
+              <div class="modal-body">
+                Modal body..
+              </div>
+              
+              <!-- Modal footer -->
+              <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+        
+      </div>
     <!--Cart Section-->
     <section class="cart">
         <div id="cartSection" class="container-fluid">
@@ -94,12 +130,12 @@
             <!--Cart Total-->
             <div id="cartTotal"class="row cart-total-row">
                 <div class="col-12 cart-total">
-                    <span class="cart-total-heading">Total Amount:</span><span class="cart-total-amount"></span>
+                   <span class="cart-total-heading cart-total-amount"></span>
                 </div>
             </div>
         </div>
     </section>
-    <a id="scrollBtn" href="#shopBanner" class="btn shop-button back-to-top">Back To Top</a>
+    <a id="scrollBtn" href="#shopBanner" class="btn back-to-top">Back To Top</a>
     <div> 
         <div class="pagination">
             <a href="#">&laquo;</a>

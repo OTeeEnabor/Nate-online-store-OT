@@ -27,8 +27,8 @@ Product.prototype.createHtml = function() {
     const shopItem = document.createElement("div");
     shopItem.classList.add("col-3",'shop-product');
     shopItem.innerHTML = `
-           <div class="card" style="width: 20rem;">
-                <img src="${this.path}" class="card-img-top" alt="...">
+           <div class="card">
+                <img src="${this.path}" class="card-img-top" alt="${this.name}">
                 <div class="card-body">
                     <h5 class="card-title shop-item-title">${this.name}</h5>
                     <p class="card-text currency"><span class="currency">R </span>${this.price}</p>
@@ -41,10 +41,10 @@ Product.prototype.createHtml = function() {
 
 };
 
-let shirt_1 = new Product('Plain Blue Shirt',200,"Rum",'/images/products/shirts/shirt_1.jpg');
-let shirt_2 = new Product('Heart Shirt', 250, "RuP",'/images/products/shirts/shirt_2.jpg');
-let shirt_3 = new Product('Black shirt',200,'PRu',"/images/products/shirts/shirt_3.jpg");
-let shirt_4 = new Product('Plain Long Sleeve Tshirt',300,"FPro","/images/products/shirts/shirt_4.jpg");
+let shirt_1 = new Product('New Colour Kimono',200,"High Store",'/images/products/shirts/Stay-New-Colour-block-Knit-Kimono-Top-SHOP.jpg');
+let shirt_2 = new Product('Animal Print Sleeve', 250, "High Store",'/images/products/shirts/Animal-Print-Ruffle-Sleeve-Top-SHOP.jpg');
+let shirt_3 = new Product('Print V-neck Cotton',200,'High Store',"/images/products/shirts/Print-V-neck-Cotton-T-shirt-SHOP.jpg");
+let shirt_4 = new Product('Leaf Print Shirt',300,"Embrace Change","/images/products/shirts/Leaf-Print-Viscose-Tunic-SHOP.jpg");
 
 const shirt = new Array();
 shirt[0] = shirt_1;

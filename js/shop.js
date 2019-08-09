@@ -62,10 +62,10 @@ Product.prototype.createHtml = function() {
 };
 
 //The code block below creates 4 jeans objects
-let jean_2 = new Product('Biker Jeans',550,'Nlu','/images/products/jeans/jeans_2.jpg');
-let  jean_3 = new Product('Skinny Jeans',500,'Yung','/images/products/jeans/jeans_3.jpg');
-let jean_4 = new Product('Skinny Blue',500,'Biker Blue','/images/products/jeans/jeans_4.jpg');
-let jean_5 = new Product('Dark Biker',550,'NlU','/images/products/jeans/jeans_1.jpg');
+let jean_2 = new Product('Slim Leg Jeans',550,'Country Street','/images/products/jeans/Embellished-Slim-Leg-Jeans-SHOP.jpg');
+let  jean_3 = new Product('Zip Stretch Jeggings',500,'Flavor Yung','/images/products/jeans/Zip-Detail-Ultra-Stretch-Jeggings-SHOP.jpg');
+let jean_4 = new Product('Animal Skinny Jeans',500,'Animal Blue','/images/products/jeans/Animal-Print-Skinny-Jeans-SHOP.jpg');
+let jean_5 = new Product('Super Skinny Jeans',550,'Super Jeans','/images/products/jeans/Super-Stretch-Skinny-Jeans-SHOP.jpg');
 //Create an array to store the 4 jeans objects
 const jean = new Array();
 jean[0] = jean_2;

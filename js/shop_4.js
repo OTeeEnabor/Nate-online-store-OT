@@ -27,8 +27,8 @@ Product.prototype.createHtml = function() {
     const shopItem = document.createElement("div");
     shopItem.classList.add("col-3",'shop-product');
     shopItem.innerHTML = `
-           <div class="card" style="width: 20rem;">
-                <img src="${this.path}" class="card-img-top" alt="...">
+           <div class="card" >
+                <img src="${this.path}" class="card-img-top" alt="${this.name}">
                 <div class="card-body">
                     <h5 class="card-title shop-item-title">${this.name}</h5>
                     <p class="card-text currency"><span class="currency">R </span>${this.price}</p>
@@ -40,10 +40,10 @@ Product.prototype.createHtml = function() {
 
 };
 
-let boot_1 = new Product('Bike Boots',700,'BBoot','/images/products/boots/boot_1.jpg');
-let boot_2 = new Product('High Heel', 1000,'bikBlu','/images/products/boots/boots_2.jpg');
-let boot_3 = new Product('low Heel',1200,"lowBl",'/images/products/boots/boots_3.jpg');
-let boot_4 = new Product('Leather Boots',1500,'LethB','/images/products/boots/boots_4.jpg');
+let boot_1 = new Product('Faux Fur Boot',700,'BBoot','/images/products/boots/Faux-Fur-Lace-up-Snow-Boots-shop.jpg');
+let boot_2 = new Product('Heel Ankle Boot', 1000,'bikBlu','/images/products/boots/Metallic-Heel-Ankle-Boots-shop.jpg');
+let boot_3 = new Product('Side Zip Boot',1200,"lowBl",'/images/products/boots/Side-Zip-Leather-Ankle-Boots-shop.jpg');
+let boot_4 = new Product('Side Leather Boot',1500,'LethB','/images/products/boots/Side-Zip-Leather-Western-Ankle-Boots-shop.jpg');
 
 const boot = new Array();
 boot[0] = boot_1;

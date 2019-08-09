@@ -27,8 +27,8 @@ Product.prototype.createHtml = function() {
     const shopItem = document.createElement("div");
     shopItem.classList.add("col-3",'shop-product');
     shopItem.innerHTML = `
-           <div class="card" style="width: 20rem;">
-                <img src="${this.path}" class="card-img-top" alt="...">
+           <div class="card" >
+                <img src="${this.path}" class="card-img-top" alt="${this.name}">
                 <div class="card-body">
                     <h5 class="card-title shop-item-title">${this.name}</h5>
                     <p class="card-text currency"><span class="currency">R </span>${this.price}</p>
@@ -40,9 +40,9 @@ Product.prototype.createHtml = function() {
 };
 
 
-let blue_denm = new  Product ('Denim Jacket',500,"Freedom","/images/featured_product_1.jpeg");
-let rainbow_jack = new Product('Rainbow Jacket', 1500, 'Rainbow Free','/images/featured_product_2.jpeg');
-let dark_jacket = new Product('Dark Blue Jacket', 1000,"Denim Blue",'/images/featured_product_3.jpeg');
+let blue_denm = new  Product ('Casual Denim Jacket',500,"Freedom Road","/images/products/jackets/COUNTRY-ROAD-Casual-Denim-Jacket-SHOP.jpg");
+let rainbow_jack = new Product('Animal Print Bomber', 1500, 'Rainbow Free','/images/products/jackets/Lightweight-Animal-Print-Bomber-SHOP.jpg');
+let dark_jacket = new Product('Dark Blue Jacket', 1000,"Denim Blue",'/images/products/jackets/Sherpa-Lined-Fleece-Gilet-SHOP.jpeg');
 let jacket_2 = new Product('Leather Jacket',500,'Freedom','/images/products/jackets/jacket_2.jpg');
  
 const jacket = new Array();

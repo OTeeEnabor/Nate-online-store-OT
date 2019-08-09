@@ -997,7 +997,9 @@ background-color:var(--black);
 .shop-item{
   margin-bottom:1rem;
 }
+.shop-item-title{
 
+}
 #shopBg{
   min-height:100%;
   min-width: 100%;

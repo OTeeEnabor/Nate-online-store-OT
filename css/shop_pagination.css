@@ -1,11 +1,9 @@
 /*Shop item title*/
 .shop-item-title{
   font-family: 'Source Sans Pro', sans-serif;
-  font-size: 2vw;
   font-weight: 600;
   font-style: normal;
   font-stretch: normal;
-  line-height: 2.4;
   letter-spacing: normal;
   text-align: center;
   color: var(--black-three);

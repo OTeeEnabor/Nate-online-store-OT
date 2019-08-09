@@ -55,67 +55,139 @@ for (i=0; i < boot.length ;i++){
 
     boot[i].createHtml();
 }
-(function(){
-    const cartButton = document.querySelectorAll('.shop-button');
-    cartButton.forEach (function(button){
-        button.addEventListener('click', function(event) {
-            if (event.target.parentElement.classList.contains("card-body")){
-    
-                let fullPath= event.target.parentElement.previousElementSibling.src;//get the path of the image file associated with this button
-                let pos = fullPath.indexOf("images");
-                let partPath = fullPath.slice(pos);
-                console.log(partPath);
-                //Create cart item object
-                const item = {};
-                item.img = partPath; //cart item image given a path
-                let name = event.target.previousElementSibling.previousElementSibling.previousElementSibling.innerText;
-                item.name = name;
-                let price = parseFloat(event.target.previousElementSibling.previousElementSibling.innerText.replace('R',''));
-                item.price=price;
-    
-                const cartItem = document.createElement("div");
-                cartItem.classList.add('row','cart-item-row')
-                cartItem.innerHTML = `
-                 
-                    <div class="col-4 cart-item">
-                        <img class="cart-item-image"src="${item.img}">
-                        <span class="cart-text cart-item-title">${item.name}</span>
-                    </div>
-                    <div class=" col-4 cart-price">
-                        <span class=" cart-text cart-item-price">R${item.price}</span>
-                    </div>
-                    <div class="col-4 cart-quantity">
-                        <div class="quantity-container">
-                                <input class="cart-quantity" type="number" value="1">
-                                <button class="btn shop-button cart-button cart-text" type="button">Remove Item</button>
-                        </div>
-                        
-                    </div>
-                </div>
-                `;
-                //Select the cart
-    
-                const cartSection = document.getElementById('cartSection');
-                console.log(cartSection)
-                const cartTotal = document.getElementById('cartTotal');
-                console.log(cartTotal)
-                cartSection.insertBefore(cartItem,cartTotal);
-    
-                alert('Item has been added to cart:)')
-            };        
-    
-        });
-    
-    });
-    
-    })();
-    
-    var removeCartButtons = document.getElementsByClassName('cart-button')
-    for (var i = 0; i < removeCartButtons.length;i++) {
-        var button = removeCartButtons[i]
-        button.addEventListener('click', function(event){
-            var buttonClicked = event.target
-            buttonClicked.parentElement.parentElement.parentElement.remove()
-            updateCartTotal()
-        })
+//This block of code will wait for the DOM to be fully loaded before the following code will be activated.
+if (document.readyState == 'loading') {
+    document.addEventListener('DOMContentLoaded',load)
+} else{
+    load()
+}
+
+ function load() {
+// add an event listener to the buttons with the class name cart-button
+    let removeButton = document.getElementsByClassName('cart-button')
+    for (var i = 0; i < removeButton.length; i++) {
+        var button = removeButton[i];
+        //button with a click event will activate the function RemoveCartItem
+        button.addEventListener('click',removeCartItem);
     }
+//add an event listener to the quantity input field with the class name cart-quantity
+    var quantityInputs = document.getElementsByClassName('cart-quantity');
+    //run a loop through all the input fields with the class name above
+    for (var i = 0; i < quantityInputs.length; i++) {
+        // for each input field add an event listener that will activate the quantityChanged function when clicked
+        var input = quantityInputs[i];
+        input.addEventListener('change',quantityChanged);
+
+    }
+// add an event listener to the buttons with the class name shop button
+    let addToCartButton = document.getElementsByClassName('shop-button');
+    for (var i = 0; i < addToCartButton.length; i++) {
+        //for each button add a click event which will activate the addToCart function
+        var button = addToCartButton[i];
+        button.addEventListener('click',addToCart);
+    }
+
+
+ };
+
+ //The following functions are linked to the event listeners created above
+
+
+//This function will remove the cart item associated with the remove button that is clicked. 
+ function removeCartItem(event) {
+     var buttonClicked = event.target
+     buttonClicked.parentElement.parentElement.parentElement.remove();
+     //Update the cart total after the cart item has been removed.
+     updateCartTotal()
+ }
+
+ // This function will set the value of the input field if the user tries to go below 1 or inputs a value that is not a number
+ function quantityChanged(event) {
+     var input = event.target
+     if (isNaN(input.value) || input.value <=0) {
+        input.value = 1
+     }
+     updateCartTotal()
+ }
+//This function updates the cart total.
+ function updateCartTotal() {
+    //Get all the items in the cart with the class name cart-item-row
+    let cartItemRows  = document.getElementsByClassName("cart-item-row");
+
+    let total = 0;
+    // For each item in the cart, run a loop that gets the quantity input and price of the item. Add all of them to the total amount in the cart. 
+    for (let i = 0; i < cartItemRows.length;i++){
+       let cartItemRow = cartItemRows[i];
+      let priceItem = cartItemRow.getElementsByClassName('cart-item-price')[0];
+      let quantityItem = cartItemRow.getElementsByClassName('cart-quantity-input')[0];
+       let price= parseFloat(priceItem.innerText.replace('R',''));
+       let quantity = quantityItem.value;
+       //increment the total amount in the cart by the price and quantity of each item in the cart. 
+       total = total + (price * quantity)
+      
+    }
+    document.getElementsByClassName('cart-total-amount')[0].innerText = "Total Amount: R"+ total;
+ }
+
+ function addToCart(event){
+     var button = event.target
+     var shopItem = button.parentElement.classList.contains("card-body");
+
+     //Create cart item object
+     const item = {};
+     //  get the path of the image file associated with this button
+     let fullPath= event.target.parentElement.previousElementSibling.src;
+    let pos = fullPath.indexOf("images");
+    let partPath = fullPath.slice(pos);
+    item.img = partPath; 
+    //cart item image given a path
+    //get the name of the shop item associated with the add to cart button clicked
+    let name = event.target.previousElementSibling.previousElementSibling.previousElementSibling.innerText;
+    //Assign the name of the shop item to as a property of the item object
+    item.name = name;
+    //get the price of the shop item associated with the add to cart button clicked
+    let price = parseFloat(event.target.previousElementSibling.previousElementSibling.innerText.replace('R',''));
+    //Assign the price of the shop item clicked as a property of the item
+    item.price=price;
+     //Create a div container to place this cart item object
+    const cartItem = document.createElement("div");
+    cartItem.classList.add('row','cart-item-row');
+    cartItem.innerHTML = `
+        <div class="col-4 cart-item">
+            <img class="cart-item-image"src="${item.img}" alt="Image of ${item.img}">
+            <span class="cart-text cart-item-title">${item.name}</span>
+        </div>
+        <div class=" col-4 cart-price">
+            <span class=" cart-text cart-item-price">R${item.price}</span>
+        </div>
+        <div class="col-4 cart-quantity">
+            <div class="quantity-container">
+                    <input class="cart-quantity-input" type="number" value="1" onclick="quantityChanged(event)">
+                    <button class="btn shop-button cart-button cart-text" type="button" onclick="removeCartItem(event)">Remove Item</button>
+            </div>
+            
+        </div>
+    </div>
+    `;
+
+
+    //This code selects the names of items in the cart.
+    let cartItemNames = document.getElementsByClassName('cart-item-title');
+
+    //Loop through all the item names in the cart
+
+    for (let i = 0; i < cartItemNames.length; i++) {
+        if (cartItemNames[i].innerText == name){
+            alert(`${item.name} has already been added to the cart, increase your quantity.`)
+            return
+        }
+    }
+    alert(`${item.name} has been added to the cart`);
+
+    const cartSection = document.getElementById('cartSection');
+    const cartTotal = document.getElementById('cartTotal');
+
+    cartSection.insertBefore(cartItem,cartTotal);
+
+    updateCartTotal();
+ };

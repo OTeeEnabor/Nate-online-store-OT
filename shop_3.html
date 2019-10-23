@@ -12,49 +12,39 @@
     <title>Shop</title>
 </head>
 <body style="background-color:antiquewhite;">
-    <header>
-        <!--Top section of the navigation bar-->
-        <div class="header-top">
-            <div id="leftHeader">
-
+    <div class="shop-header">
+        <div class="container-fluid">
+            <div class="row shop-page-header-top">
+                <div class="col-sm-12 col-lg-3 " >
+                </div>
+                <div class="col-sm-12 col-lg-5 " id="centerHeader">
+                    FREE SHIPPING FOR ORDERS OVER 200
+                </div>
+                <div class="shop-page-link-icons col-sm-12 col-lg-4 ">
+                    <a href ="www.facebook.com" target="\self"><i class="fab fa-facebook-f"style="color:white;"></i> </a>
+                    <a href="www.google.com"target="_self"><i class="fab fa-google-plus"style="color:white;"></i></a>
+                    <a href="www.twitter.com"target="\self"><i class="fab fa-twitter"style="color:white;"></i></a>
+                    <a href="www.pinterest.com"target="\self"><i class="fab fa-pinterest "style="color:white;"></i></a>
+                </div>
             </div>
-            <div id="centerHeader">
-                FREE SHIPPING FOR ORDERS OVER R200
-            </div>
-            <div id="rightHeader">
-                <a href ="" target="\self"><i class="fab fa-facebook-f"></i> </a>
-                <a href=""target="\self"><i class="fab fa-google-plus"></i></a>
-                <a href=""target="\self"><i class="fab fa-twitter"></i></a>
-                <a href=""target="\self"><i class="fab fa-pinterest"></i></a>
+            <div class="row shop-page-header-bottom">
+                <div class="col-sm-12 col-lg-3 shop-logo-container" id="shopLogoCotainer">
+                        <a href ="index.html" targets="_self">N-A-T-E-B</a>
+                </div>
+                <div class="col-sm-12 col-lg-9 shop-page-navigation-container">
+                    <a href="index.html">Home</a>
+                    <a href="shop.html">shop</a>
+                    <a href="about.html" target="_self">about</a>
+                    
+                    <a href="blog.html">blog</a>
+                    <a href="contact.html">contact</a>
+                    <a href="lookbook.html">lookbook</a>
+                </div>
             </div>
         </div>
-        <!--Bottom section of the navigation bar-->
-        <nav class="navigation">
-            <div id="leftNav">
-
-            </div>
-            <div id="centerNav">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="shop.html">shop</a></li>
-                    <li><a href="about.html" target="_self">about</a></li>
-                    <li><a href ="index.html" target="_self">N-A-T-E-B</a>
-                    <li><a href="blog.html">blog</a></li>
-                    <li><a href="contact.html">contact</a></li>
-                    <li><a href="lookbook.html">lookbook</a></li>
-                </ul>
-            </div>
-            <div id="rightNav">
-                 <a href ="www.facebook.com" target="\self"><i class="fab fa-facebook-f"></i> </a>
-                <a href="www.google.com"target="\self"><i class="fab fa-google-plus"></i></a>
-                <a href="www.twitter.com"target="\self"><i class="fab fa-twitter"></i></a>
-                <a href="www.pinterest.com"target="\self"><i class="fab fa-pinterest"></i></a>
-            </div>
-        </nav>
-    </header>
+    </div>
     <div id="shopBanner" class="shop-banner-image">
     <p class="heading-1">shop</p>
-      <img src="/images/shop_background.jpg" id="shopBg">
     </div>
     <!--Start of Shop Section-->
     <section id="shopSection"class="shop-section">
@@ -86,13 +76,13 @@
         </section>
     <a id="scrollBtn" href="#shopBanner" class="btn shop-button back-to-top">Back To Top</a>   
     <div> 
-        <div class="pagination">
-            <a href="#">&laquo;</a>
-            <a href="shop.html" target="\self">1</a>
-            <a class="active" href="shop_2.html"target="\self">2</a>
-            <a href="shop_3.html"target="\self">3</a>
-            <a href="shop_4.html"target="\self">4</a>
-            <a href="#">&raquo;</a>
+       <div class="pagination">
+            <a id ="previous" href="#" onclick="">&laquo;</a>
+            <a id="s1" href="shop.html" target="\self">1</a>
+            <a id="s2" href="shop_2.html"target="\self">2</a>
+            <a id="s3" class ="active"href="shop_3.html"target="\self">3</a>
+            <a id="s4" href="shop_4.html"target="\self">4</a>
+            <a id ="next"href="#" onclick="">&raquo;</a>
         </div>
     </div>    
     <footer>

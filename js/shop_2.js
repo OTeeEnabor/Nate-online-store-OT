@@ -42,8 +42,8 @@ Product.prototype.createHtml = function() {
 
 let blue_denm = new  Product ('Casual Denim Jacket',500,"Freedom Road","/images/products/jackets/COUNTRY-ROAD-Casual-Denim-Jacket-SHOP.jpg");
 let rainbow_jack = new Product('Animal Print Bomber', 1500, 'Rainbow Free','/images/products/jackets/Lightweight-Animal-Print-Bomber-SHOP.jpg');
-let dark_jacket = new Product('Dark Blue Jacket', 1000,"Denim Blue",'/images/products/jackets/Sherpa-Lined-Fleece-Gilet-SHOP.jpeg');
-let jacket_2 = new Product('Leather Jacket',500,'Freedom','/images/products/jackets/jacket_2.jpg');
+let dark_jacket = new Product('Lined Fleece Gilet', 1000,"HIgh Bomber",'/images/products/jackets/Sherpa-Lined-Fleece-Gilet-SHOP.jpg');
+let jacket_2 = new Product('Faux Fur Jacket',500,'Freedom Jacket Fur','/images/products/jackets/WITCHERY-Faux-Fur-Jacket-SHOP.jpg');
  
 const jacket = new Array();
 jacket[0] = blue_denm;

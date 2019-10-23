@@ -12,4 +12,4 @@ Shop for clothes on our site
 ## Authors
 *Oselu 
 ## Acknowledgments
-Thank you to the following helpful resourc
+Thank you to the following helpful resource

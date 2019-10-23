@@ -1,3 +1,54 @@
+
+/*Shop Header Navigation */
+.shop-page-header-top{
+  background-color:#474c6c;
+}
+.shop-page-header-bottom{
+  background-color:#ceb1a0;
+}
+.shop-page-link-icons{
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  ;
+}
+.shop-page-link-icons a{
+  padding:1rem;
+}
+.shop-logo-container{
+  display:flex;
+  justify-content: flex-start;
+}
+.shop-logo-container a{
+  padding:0rem 1rem;
+  font-family: 'Dosis', sans-serif;
+  font-size: 2rem;
+  font-weight: bolder;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 0.05rem;
+  text-align: left;
+  text-transform:uppercase;
+  color: black;
+}
+.shop-page-navigation-container{
+  display:flex;
+  justify-content: flex-end;
+}
+.shop-page-navigation-container a{
+  padding:0rem 1rem;
+  font-family: 'Dosis', sans-serif;
+  font-size: 1.2rem;
+  font-weight: bolder;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 0.05rem;
+  text-align: left;
+  text-transform:uppercase;
+  color: black;
+}
 /*Shop item title*/
 .shop-item-title{
   font-family: 'Source Sans Pro', sans-serif;
@@ -8,7 +59,10 @@
   text-align: center;
   color: var(--black-three);
 }
-
+/*Cart modal styling*/
+.cart-modal-button{
+  margin-left:90rem;
+}
 /*Cart heading positioning styling*/
 .cart-item-head{
   display: flex;
@@ -92,8 +146,13 @@
   color: var(--black-three);
 }
 /* Pagination links */
+.pagination{
+  justify-content: space-evenly;
+  background-color: #e5e5e5;
+}
 .pagination a {
   color: black;
+  font-size:1.5rem;
   float: center;
   padding: 2rem 5rem;
   text-decoration: none;
@@ -107,4 +166,7 @@
 } */
 
 /* Add a grey background color on mouse-over */
-.pagination a:hover:not(.active) {background-color: rgb(199, 116, 116);}
+.pagination a:hover:not(.active) {
+  font-weight: bold;
+  background-color: rgb(199, 116, 116);
+}

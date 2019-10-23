@@ -1,0 +1,115 @@
+
+/*Navigation styling for the lookbook */
+.navigation-lookbook{
+    background-color: black;
+}
+.navigation-lookbook ul{
+    display:inline-block;
+    margin-left:1rem;
+    list-style-type: none;
+    text-align:right;
+}
+.navigation-lookbook ul li{
+    display:inline-block;
+    margin:1rem 2rem 1rem;
+    
+
+}
+.navigation-lookbook ul li a{
+    color:white;
+    font-size: 1rem;
+    font-weight:bolder;
+    text-transform: uppercase;
+
+}
+/*Navigation LOGO */
+#lookbookLogo{
+    margin: 1rem 2rem;
+    color:White;
+    font-size: 2rem;
+    font-weight:bolder;
+    text-transform: uppercase;
+}
+/*LOOKBOOK MAIN HEADING STYLING */
+.look-heading1{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 8vw;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.19;
+    letter-spacing: normal;
+    text-align: center;
+    color: var(--black-three);
+
+}
+.gallery-banner{
+    margin-top:15vw;
+}
+div.gallery {
+    border: 1px solid #ccc;
+  }
+  
+  div.gallery:hover {
+    border: 1px solid #777;
+  }
+  
+  div.gallery img {
+    width: 100%;
+    height: auto;
+  }
+  
+  div.desc {
+    padding: 15px;
+    text-align: center;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  .responsive {
+    padding: 0 6px;
+    float: left;
+    width: 24.99999%;
+  }
+  
+  @media only screen and (max-width: 700px) {
+    .responsive {
+      width: 49.99999%;
+      margin: 6px 0;
+    }
+  }
+  
+  @media only screen and (max-width: 500px) {
+    .responsive {
+      width: 100%;
+    }
+  }
+  
+  .clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  /* </style> */
+.lookbook-container{
+    margin: 2vw 1vw 5vw;
+    background-color:black; 
+}
+.image-container{
+    display:flex;
+    justify-content: center;
+}
+.lookbook-container img{
+   margin: 1rem 0rem 1rem 1rem;
+   object-fit:cover;
+    
+    transition: transform .2s;
+}
+.lookbook img :hover{
+    transform:scale(1.02);
+}
+.row{
+    margin-top:2rem;
+}

@@ -46,13 +46,14 @@ Product.prototype.description = function () {
 Product.prototype.createHtml = function() {
     const shop = document.getElementById('Row');
     const shopItem = document.createElement("div");
-    shopItem.classList.add("col-3",'shop-product');
+    //add the following list of classes to the div created- in ShopItem
+    shopItem.classList.add("col-sm-12","col-lg-3",'shop-product');
     shopItem.innerHTML = `
-           <div class="card">
+           <div class="card mt-4">
                 <img src="${this.path}" class="card-img-top" alt="${this.name}">
                 <div class="card-body">
                     <h5 class="card-title shop-item-title">${this.name}</h5>
-                    <p class="card-text currency"><span class="currency">R </span>${this.price}</p>
+                    <p class="card-text currency shop-currency"><span class="currency shop-currency">R </span>${this.price}</p>
                     <p class="card-text item-description">${this.description}</p>
                     <button class="btn shop-button" type="button" onclick="load()"><i class='fas fa-shopping-cart'></i>Add to cart</button>
                 </div>
